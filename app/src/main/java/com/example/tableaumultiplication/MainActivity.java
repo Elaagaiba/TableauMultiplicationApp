@@ -3,6 +3,7 @@ package com.example.tableaumultiplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tv_affichage;
     EditText ET_number;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             tv_affichage =findViewById(R.id.tv_affichage);
+<<<<<<< HEAD
             tv_affichage.setText("\\? * 1 = \\?\\n\\? * 2 = \\?\\n\\? * 3 = \\?\\n\\? * 4 = \\?\\n\\? * 5 = \\?\\n\\? * 6 = \\?\\n\\? * 7 = \\?\\n\\? * 8 = \\?\\n\\? * 9 = \\?\\n\\? * 10 = \\?\\n");
+=======
+//            tv_affichage.setText("\\? * 1 = \\?\\n\\? * 2 = \\?\\n\\? * 3 = \\?\\n\\? * 4 = \\?\\n\\? * 5 = \\?\\n\\? * 6 = \\?\\n\\? * 7 = \\?\\n\\? * 8 = \\?\\n\\? * 9 = \\?\\n\\? * 10 = \\?\\n");
+>>>>>>> e37536c (add buttons for background & style text)
             ET_number =findViewById(R.id.ET_number);
             ET_number.setText("") ;
            }
@@ -36,5 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+//    ET_number.setGravity(Gravity.CENTER);
+//    tv_affichage.setGravity(Gravity.CENTER);
     }
 }
