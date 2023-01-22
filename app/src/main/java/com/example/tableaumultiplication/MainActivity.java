@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         btn_reinitialiser.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick(View view) {
-//            tv_affichage =findViewById(R.id.tv_affichage);
-//            tv_affichage.setText("\\? * 1 = \\?\\n\\? * 2 = \\?\\n\\? * 3 = \\?\\n\\? * 4 = \\?\\n\\? * 5 = \\?\\n\\? * 6 = \\?\\n\\? * 7 = \\?\\n\\? * 8 = \\?\\n\\? * 9 = \\?\\n\\? * 10 = \\?\\n");
+            tv_affichage =findViewById(R.id.tv_affichage);
+            tv_affichage.setText("\\? * 1 = \\?\\n\\? * 2 = \\?\\n\\? * 3 = \\?\\n\\? * 4 = \\?\\n\\? * 5 = \\?\\n\\? * 6 = \\?\\n\\? * 7 = \\?\\n\\? * 8 = \\?\\n\\? * 9 = \\?\\n\\? * 10 = \\?\\n");
             ET_number =findViewById(R.id.ET_number);
             ET_number.setText("") ;
            }
