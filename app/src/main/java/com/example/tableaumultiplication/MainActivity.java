@@ -37,14 +37,18 @@ public class MainActivity extends AppCompatActivity {
             try {
 
 
-                tv_affichage =findViewById(R.id.tv_affichage);
-                StringBuilder r = new StringBuilder();
-                for (int i = 0; i <= 10 ; i++) {
-                    r.append(String.format("? x %d = ? \n", i));
+                int Number = Integer.parseInt(ET_number.getText().toString());
+                String s="";
+                for (int i=1;i<=10;i++) {
+                    int r= Number*i;
+                    s+=String.format(" %d * %d= %d \n",Number,i,r);
+                    r=0;
+
                 }
-                tv_affichage.setText(r.toString());
-                ET_number =findViewById(R.id.ET_number);
-                ET_number.setText("") ;
+                tv_affichage.setText(s);
+
+
+
             }catch (NumberFormatException e){
                 toast.show();
                 btn_reinitialiser.callOnClick();
@@ -95,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         btn_pink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setActivityColor(Color.RED);
+                setActivityColor(0x7A5C4444);
             }
         });
         btn_yellow.setOnClickListener(new View.OnClickListener() {
