@@ -18,16 +18,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_reinitialiser = findViewById(R.id.btn_reinitialiser);
+
         btn_reinitialiser.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick(View view) {
+
             tv_affichage =findViewById(R.id.tv_affichage);
-            tv_affichage.setText("\\? * 1 = \\?\\n\\? * 2 = \\?\\n\\? * 3 = \\?\\n\\? * 4 = \\?\\n\\? * 5 = \\?\\n\\? * 6 = \\?\\n\\? * 7 = \\?\\n\\? * 8 = \\?\\n\\? * 9 = \\?\\n\\? * 10 = \\?\\n");
+            StringBuilder r = new StringBuilder();
+            for (int i = 0; i <= 10 ; i++) {
+                r.append(String.format("? x %d = ? \n", i));
+            }
+            tv_affichage.setText(r.toString());
             ET_number =findViewById(R.id.ET_number);
             ET_number.setText("") ;
            }
         }
         );
+
         btn_QUITTER = findViewById(R.id.btn_QUITTER);
         btn_QUITTER.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +43,26 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+
+        btn_afficher = findViewById(R.id.btn_afficher);
+        btn_afficher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ET_number =findViewById(R.id.ET_number);
+
+                tv_affichage =findViewById(R.id.tv_affichage);
+                int Nbr = Integer.parseInt(ET_number.getText().toString());
+                String s="";
+                for (int i=1;i<=10;i++) {
+                    int r= Nbr*i;
+                    s+=String.format(" %d * %d= %d \n",Nbr,i,r);
+                    r=0;
+
+                }
+                tv_affichage.setText(s);
+
+            }
+        });
+
     }
 }
