@@ -36,14 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
             try {
 
-
-                int Number = Integer.parseInt(ET_number.getText().toString());
+                ET_number.setText("");
                 String s="";
                 for (int i=1;i<=10;i++) {
-                    int r= Number*i;
-                    s+=String.format(" %d * %d= %d \n",Number,i,r);
-                    r=0;
-
+                    s+=String.format(" ? * %d= ? \n",i);
                 }
                 tv_affichage.setText(s);
 
